@@ -11,7 +11,7 @@
     <div>
 <!--headding-->
         <p class="headding"><b>DOM Manipulation with Forms</b></p>
-        <form class="inputfiled">
+        <form class="inputfiled" id="forms">
 <!--First name-->
             <label for="fname"><b>First name:</b></label><br>
             <input type="text" id="fname" name="fname" required><br>
@@ -35,15 +35,15 @@
 <!--food-->              
             <p class="FoodCB"><b>Choice of food(must choose at least 2 out of 5 options):</b></p>
                 <div class="options">
-                    <input type="checkbox" id="food" name="noodels">
+                    <input type="checkbox" id="food1" value="noodels" name="noodles">
                     <label for="noodels">Noodels</label>
-                      <input type="checkbox" id="food" name="Dosa">
+                      <input type="checkbox" id="food2" value="Dosa" name="Dosa">
                     <label for="Dosa">Dosa</label>
-                      <input type="checkbox" id="food" name="Parota">
+                      <input type="checkbox" id="food3" value="Parota" name="Parota">
                     <label for="Parota">Parota</label>          
-                      <input type="checkbox" id="food" name="Shawarma">
+                      <input type="checkbox" id="food4" value="Shawarma" name="shawarma">
                     <label for="Shawarma">Shawarma</label>
-                      <input type="checkbox" id="food" name="FriedRice">
+                      <input type="checkbox" id="food5" value="FriedRice" name="FriedRice">
                     <label for="FriedRice">FriedRice</label>
                     </div>
 <!--State-->                       
@@ -53,14 +53,13 @@
             <label for="country"><b>Country :</b></label><br>
             <input type="text" id="country" name="country" required><br>
 <!--Submit Button-->              
-            <input type="submit" value="Submit">
+            <input type="button" class="btn btn-secondary" value="Submit" onclick={validate()}>
         </form><br>
         <div>
 <!--Table to filled when submited-->                  
-            <table class="table">
+            <table class="table" id="datastored">
                 <thead class="thead-dark">
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">First name</th>
                     <th scope="col">Last name</th>
                     <th scope="col">Address</th>
